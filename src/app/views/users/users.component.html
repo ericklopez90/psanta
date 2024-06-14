@@ -1,1 +1,22 @@
-<p>users works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-10 offset-1 my-5">
+
+
+      <ul>
+        <li *ngFor="let usuario of userList| paginate: { itemsPerPage: 10, currentPage: p }">
+          {{ usuario.name }}
+        </li>
+      </ul>
+
+      <div class="row">
+        <div class="col-12 my-5">
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>

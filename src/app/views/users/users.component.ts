@@ -10,8 +10,9 @@ import { UserServiceService } from 'src/app/services/user-service.service';
 })
 export class UsersComponent implements OnInit, OnDestroy {
 
-  userList!: UserResponse
+  userList: UserResponse[] = []
   userSubScriptions!: Subscription;
+  p: number = 1;
 
   constructor(private userService:UserServiceService) {}
 
@@ -21,15 +22,15 @@ export class UsersComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    if (this.userSubScriptions) {
     this.userSubScriptions.unsubscribe();
+    }
   }
 
   getUsers(){
     const sub = this.userService.getUserList()
-    .subscribe(response =>{
-      console.log(response)
+    .subscribe((response: UserResponse[]) =>{
       this.userList = response;
-      console.log(this.userList)
       this.userSubScriptions = sub;
     })
   }

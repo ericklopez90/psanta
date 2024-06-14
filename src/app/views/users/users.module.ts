@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UsersComponent } from './users.component';
 import { UsersRoutingModule } from './users-routing.module';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -11,7 +12,8 @@ import { UsersRoutingModule } from './users-routing.module';
   ],
   imports: [
     CommonModule,
-    UsersRoutingModule
+    UsersRoutingModule,
+    NgxPaginationModule
   ],
   exports: [UsersComponent]
 })
