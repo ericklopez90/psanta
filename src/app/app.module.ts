@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderModule } from './components/header/header.module';
 import { FooterModule } from './components/footer/footer.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { FooterModule } from './components/footer/footer.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     HeaderModule,
     FooterModule
   ],
