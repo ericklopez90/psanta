@@ -6,10 +6,11 @@ import { AppComponent } from './app.component';
 import { HeaderModule } from './components/header/header.module';
 import { FooterModule } from './components/footer/footer.module';
 import { HttpClientModule } from '@angular/common/http';
+import { TruncatePipe } from './pipe/truncate.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

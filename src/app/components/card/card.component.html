@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-header">{{user.name | truncate:20:true}}</h5>
+      <h6 class="card-subtitle my-2 text-body-secondary">{{user.email}}</h6>
+      <p class="card-text">{{user.body | truncate:30:true}}</p>
+      <a href="#" class="card-link">Card link</a>
+      <a href="#" class="card-link">Another link</a>
+    </div>
+  </div>

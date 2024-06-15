@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { UsersComponent } from './users.component';
 import { UsersRoutingModule } from './users-routing.module';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { CardModule } from 'src/app/components/card/card.module';
 
 
 
@@ -13,7 +14,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
   imports: [
     CommonModule,
     UsersRoutingModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    CardModule
   ],
   exports: [UsersComponent]
 })
