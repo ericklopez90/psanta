@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { UserResponse } from 'src/app/interfaces/userResponse.interface';
 
 @Component({
@@ -9,7 +9,9 @@ import { UserResponse } from 'src/app/interfaces/userResponse.interface';
 export class CardComponent {
 
   @Input() user!: UserResponse;
-
-
-
+  @Output() editUser = new EventEmitter<UserResponse>();
+  
+  onEditClick() {
+    this.editUser.emit(this.user);
+  }
 }

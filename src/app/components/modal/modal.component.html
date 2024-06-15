@@ -1,1 +1,32 @@
-<p>modal works!</p>
+<div class="modal-header">
+    <h4 class="modal-title">{{ user ? 'Editar Usuario' : 'Nuevo Usuario' }}</h4>
+    <button type="button" class="close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input type="text" class="form-control" id="name" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+      </div>
+      <div class="form-group">
+        <label for="body">body:</label>
+        <input type="body" class="form-control" id="body" formControlName="body">
+      </div>
+      <div class="row">
+        <div class="col-2 offset-7">
+            <button *ngIf="user" type="button" class="btn btn-danger color-button mt-2 " (click)="onDeleteClick()">Delete</button>
+        </div>
+        <div class="col-2">
+            <button type="submit" class="btn btn-danger mt-2">Guardar</button>
+        </div>
+      </div>
+
+
+    </form>
+  </div>

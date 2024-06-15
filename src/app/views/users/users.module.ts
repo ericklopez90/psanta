@@ -4,6 +4,7 @@ import { UsersComponent } from './users.component';
 import { UsersRoutingModule } from './users-routing.module';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { CardModule } from 'src/app/components/card/card.module';
+import { ModalModule } from 'src/app/components/modal/modal.module';
 
 
 
@@ -15,7 +16,8 @@ import { CardModule } from 'src/app/components/card/card.module';
     CommonModule,
     UsersRoutingModule,
     NgxPaginationModule,
-    CardModule
+    CardModule,
+    ModalModule
   ],
   exports: [UsersComponent]
 })
